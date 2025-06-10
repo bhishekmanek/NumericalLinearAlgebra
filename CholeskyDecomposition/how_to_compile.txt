@@ -1,0 +1,10 @@
+To compile the code, simply do make and enter. It will create an executable file run_cholesky.exe. 
+
+To finally execute type, ./run_cholesky.exe FILENAME and then enter. It will ask for order of fitting. Type order of fitting and enter.
+
+NOTE: One constraint to the input file is that the dimension of the input file should be written in the first row. For example in the current case, I have 21	2 written in atkinson.dat 
+
+Once executed, the program creates a data file "plot.dat" containing the polynomial fitting function data. You can use gnuplot for plotting. Use the following commands - 
+
+gnuplot>plot 'plot.dat' w l
+gnuplot>replot "<(sed -n '2,21p' atkinson.dat)"
